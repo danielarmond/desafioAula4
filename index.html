@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Desafio Aula 4</title>
+</head>
+<body>
+
+<h1>Desafio Aula 4</h1>
+
+<script>
+
+let valorReais = prompt("Digite um valor em reais para ser convertido:");
+let moeda = prompt("Digite:\n 1 para converter para dolar.\n 2 para converter para Euro.\n 3 para converter para Iene.")
+const taxaCambioDolar = 5.30;
+const taxaCambioEuro = 5.38;
+const taxaCambioIene = 0.033;
+
+
+function converterDolar (valorReais){
+    return valorReais / taxaCambioDolar;
+}
+
+function converterEuro (valorReais){
+    return valorReais / taxaCambioEuro;
+}
+
+function converterIene (valorReais){
+    return valorReais / taxaCambioIene;
+}
+
+if(moeda == 1){
+    let valorConvertido =  converterDolar(valorReais);
+    alert("O valor convertido para dolar é: "+valorConvertido.toFixed(2))
+}else if (moeda == 2) {
+    let valorConvertido = converterEuro(valorReais);
+    alert("O valor convertido para euro é: "+valorConvertido.toFixed(2))
+}else if (moeda == 3) {
+    let valorConvertido = converterIene(valorReais);
+    alert("O valor convertido para iene é: "+valorConvertido.toFixed(2))
+} else {
+}
+
+
+</script>
+
+</body>
+</html>
